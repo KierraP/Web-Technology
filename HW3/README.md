@@ -1,0 +1,5 @@
+# Web-Technology AI Comparison
+What I coded wasn't that different from what the AI did. I used more spaces between my coding lines, but otherwise pretty similar. Probably because coding is so standardized, and this is a pretty simple prompt. It might have been more different if it was more complicated.
+I'm not a fan of gen AI, and I think this just proves that it's not necessary. If what I did is basically the same as what the AI did and it wasn't that difficult to do, there is really no point in using the AI when I can do it myself. 
+The AI generated stuff does not feel like my work. I just copy and pasted the prompt into ChatGPT. Doing that did not make me feel a sense of accomplishment. When I initially did the assignment myself, I felt a lot more accomplished. The information will stay in my brain, because it had to actually go through my brain. Using AI means it never sticks in your head because you're not actually doing anything. 
+I guess really advanced coders who do a lot more high level stuff might benefit from AI doing the simple, monotonous stuff to reduce their work load, but I don't think gen AI should be doing everything. 
