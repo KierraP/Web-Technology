@@ -6,24 +6,26 @@ function makechoice(choice) {
     story.textContent =
       "You eye the tall lamp in the living room. Jumping at it would probably knock it over. Do you do it?";
     image.src = "images/lamp.png";
-    updateChoices(["Yes! I am chaos incarnate.", "No, too much effort."]);
+    morechoices(["Yes! I am chaos incarnate.", "No, too much effort."]);
   } 
+
   else if (choice === "knockover") {
     story.textContent =
       "You jump on the kitchen counter and see your human's boba tea. Are you sure you want to knock it over?";
     image.src = "images/bobatea.png";
-    updateChoices(["Yes! A mess we must make!", "No, too boring."]);
+    morechoices(["Yes! A mess we must make!", "No, too boring."]);
   } 
+
   else if (choice === "sleep") {
     story.textContent =
       "You find a cardboard box to sleep in. You push the cat that is already in the box out. The box is yours now. Sleep now?";
     image.src = "images/othercat.png";
-    updateChoices(["Yes, I claim victory and this box is my prize.", "No, I don't think I want the box anymore."]);
+    morechoices(["Yes, I claim victory and this box is my prize.", "No, I don't think I want the box anymore."]);
   }
 }
 
 
-function updateChoices(options) {
+function morechoices(options) {
   const choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
 
