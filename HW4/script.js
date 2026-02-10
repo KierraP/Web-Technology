@@ -2,6 +2,7 @@ function makechoice(choice) {
   const story = document.getElementById("story");
   const image = document.getElementById("cat-pic");
 
+
   if (choice === "jump") {
     story.textContent =
       "You eye the tall lamp in the living room. Jumping at it would probably knock it over. Do you do it?";
@@ -12,7 +13,7 @@ function makechoice(choice) {
   else if (choice === "knockover") {
     story.textContent =
       "You jump on the kitchen counter and see your human's boba tea. Are you sure you want to knock it over?";
-    image.src = "images/bobatea.png";
+    image.src = "images/bobatea.PNG";
     morechoices(["Yes! A mess we must make!", "No, too boring."]);
   } 
 
@@ -38,6 +39,7 @@ function morechoices(options) {
     choicesDiv.appendChild(button);
   }
 }
+
 
 
 function end(decision) {
