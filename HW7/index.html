@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Memory Game Intro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Vegetable Matching Game</h1>
+    <img src="images/vegetables.png" height="600" alt="a chart of vegetables">
+<br>    
+<br>
+
+<form onsubmit="start(event)">
+    First Name:
+    <input type="text" id="first"><br><br>
+    Last Name:
+    <input type="text" id="last"><br><br>
+    Age:
+    <input type="number" id="age"><br><br>
+
+    <button type="button" onclick="start()">Start</button>
+</form>
+
+<script>
+    function start() {
+        var f = document.getElementById("first").value;
+        var l = document.getElementById("last").value;
+        var a = document.getElementById("age").value;
+
+    if (f == "" || l == "" || a == "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    var player = {
+        firstName: f,
+        lastName: l,
+        age: a,
+        attempts: 0
+    };
+
+    localStorage.setItem("player", JSON.stringify(player));
+    window.location = "game.html";
+}
+</script>
+
+</body>
+</html>

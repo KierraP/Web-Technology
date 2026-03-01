@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Results</h1>
+
+<p id="info"></p>
+
+<button onclick="again()">Play Again</button>
+<button onclick="clearData()">Reset</button>
+
+<script>
+    var player = JSON.parse(localStorage.getItem("player"));
+
+    if (player != null) {
+
+    document.getElementById("info").innerHTML =
+        "Name: " + player.firstName + " " + player.lastName + "<br>" +
+        "Age: " + player.age + "<br>" +
+        "Total Attempts: " + player.attempts;
+}
+
+    function again() {
+    window.location = "game.html";
+}
+
+    function clearData() {
+    localStorage.clear();
+    window.location = "index.html";
+}
+
+</script>
+
+</body>
+</html>

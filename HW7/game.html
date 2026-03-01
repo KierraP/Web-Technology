@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vegetable Matching Game</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    #board {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        gap: 10px;
+        justify-content: center;   
+        }
+</style>
+</head>
+
+<body>
+<h2>Vegetable Matching Game</h2>
+    <p id="tries">Attempts: 0</p>
+
+    <div id="board"></div>
+
+<script>
+    var player = JSON.parse(localStorage.getItem("player"));
+
+    var images = [
+        "images/bellpepper.PNG",
+        "images/cabbage.PNG",
+        "images/carrot.PNG",
+        "images/eggplant.PNG",
+        "images/potato.PNG",
+        "images/tomato.PNG"
+    ];
+
+    var cards = [];
+
+for (var i = 0; i < images.length; i++) {
+    cards.push(images[i]);
+    cards.push(images[i]);
+}
+
+for (var i = 0; i < cards.length; i++) {
+    var r = Math.floor(Math.random() * cards.length);
+    var temp = cards[i];
+    cards[i] = cards[r];
+    cards[r] = temp;
+}
+
+    var first = null;
+    var second = null;
+    var attempts = 0;
+    var matches = 0;
+
+    var board = document.getElementById("board");
+
+for (var i = 0; i < cards.length; i++) {
+
+    var div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = "<img src='images/back.png' width='80'>";
+    div.setAttribute("data-img", cards[i]);
+
+    div.onclick = function() {
+
+        if (this == first) return;
+
+        this.innerHTML = "<img src='" + this.getAttribute("data-img") + "' width='80'>";
+
+        if (first == null) {
+            first = this;
+        } else {
+            second = this;
+
+            attempts++;
+            document.getElementById("tries").innerHTML = "Attempts: " + attempts;
+
+            if (first.getAttribute("data-img") == second.getAttribute("data-img")) {
+
+                matches++;
+                first = null;
+                second = null;
+
+                if (matches == 6) {
+                    finishGame();
+                }
+
+            } else {
+
+                setTimeout(function() {
+                    first.innerHTML = "<img src='images/back.png' width='80'>";
+                    second.innerHTML = "<img src='images/back.png' width='80'>";
+                    first = null;
+                    second = null;
+                }, 800);
+            }
+        }
+    };
+
+    board.appendChild(div);
+}
+
+function finishGame() {
+    player.attempts = attempts;
+    localStorage.setItem("player", JSON.stringify(player));
+    window.location = "results.html";
+}
+
+</script>
+
+</body>
+</html>

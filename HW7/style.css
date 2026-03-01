@@ -1,0 +1,53 @@
+body {
+    background-color: #87e481;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: rgb(18, 94, 50);
+}
+
+h2 {
+    color: rgb(18, 94, 50);
+    margin-top: 30px;
+}
+
+#tries {
+    color: rgb(18, 94, 50);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 150%;
+    max-height: 150%;
+}
+
+button {
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: rgb(12, 53, 2);
+}
+
