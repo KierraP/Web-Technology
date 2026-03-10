@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Justice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Social Justice</h1>
+
+<img id="image" src="" width="400">
+<h2 id="title"></h2>
+<p id="description"></p>
+<p id="author"></p>
+<p id="year"></p>
+
+<button onclick="newSlide()">Next Slide</button>
+
+<script>
+
+class Slide {
+  constructor(title, image, description, author, year) {
+    this.title = title;
+    this.image = image;
+    this.description = description;
+    this.author = author;
+    this.year = year;
+  }
+}
+
+let slide1 = new Slide(
+  "Climate Change",
+  "images/ice-bed.jpg",
+  "<i>Ice Bed</i> portrays a polar bear asleep on what is left of a melting iceberg in Norway. This photo captures the reality of climate change: glaciers melting, sea levels rising, and ecosystems being destroyed. Climate change is a global issue, and threatens all living things on the planet. It is among the most pressing issues we face today.",
+  "Nima Sarikhani",
+  "2023"
+);
+
+let slide2 = new Slide(
+  "War",
+  "images/munitions.jpg",
+  "Israeli missiles strike Lebanon during the conflict in the Middle East. Sights like these are not uncommon, as multiple wars are ongoing across the world and tensions are only escalating. War has no victors, only victims.",
+  "Leo Correa",
+  "2024"
+);
+
+let slide3 = new Slide(
+  "Immigration",
+  "images/portland-frog.png",
+  "Protests have been ongoing in the United States, with immigration often a central theme. The image above was from a protest against the innapropriate, violent, and sometimes fatal actions of ICE officers in Portland, among other cities. Protesters have found different forms of resistance, such as the inflatable frog costumes shown above, in an effort to paint a picture of how unjust and unnecesarry such aggressive tactics are.",
+  "Stephen Lam",
+  "2025"
+);
+
+let slide4 = new Slide(
+  "Women's Rights",
+  "images/handmaids-tale.png",
+  "Women's rights have been facing constant threat, especially since the repeal of Roe v. Wade in 2022. The women above are at a protest wearing costumes that reference <i>The Handmaid's Tale</i>, a dystopian TV series that portrays a country created from the ashes of the United States where women have no rights.",
+  "Yunghi Kim",
+  "2025"
+);
+
+let slide5 = new Slide(
+  "Book Censorship",
+  "images/book-burning.jpg",
+  "Book banning is rampant right now, and while no one is actually <i>burning</i> books at the moment, the motive is the same now as it was in Nazi Germany. Banning books halts the flow of information, and an uninformed populace is much easier to manipulate, not to mention it is an infringement on free speech.",
+  "Hulton Archive",
+  "1933"
+);
+
+let slides = [slide1, slide2, slide3, slide4, slide5];
+
+function newSlide() {
+
+  let randomNumber = Math.floor(Math.random() * slides.length);
+
+  let slide = slides[randomNumber];
+
+  document.getElementById("image").src = slide.image;
+  document.getElementById("title").innerHTML = slide.title;
+  document.getElementById("description").innerHTML = slide.description;
+  document.getElementById("author").innerHTML = "Author: " + slide.author;
+  document.getElementById("year").innerHTML = "Year: " + slide.year;
+
+}
+
+newSlide();
+
+</script>
+
+</body>
+</html>
