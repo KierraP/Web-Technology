@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial;
+  color: white;
+  background: #76b0c7;
+}
+
+#scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.outside-item {
+  position: absolute;
+  width: 90px; /* default */
+  z-index: 3;
+}
+
+#cat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  z-index: 1;
+}
+
+#window {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  background: rgba(227, 232, 240, 0.25);
+  border: 6px solid rgb(72, 46, 34);
+  z-index: 2;
+}
+
+#text {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  font-size: 30px;
+  color: rgb(38, 124, 124);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  z-index: 4;
+}

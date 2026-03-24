@@ -1,0 +1,1 @@
+I used ChatGPT to check my work. If something wasn't working the way I wanted, I had it check why that might be. This mainly came in handy when I was trying to animate the movement of the clouds, rain, snow, and leaves. I used it to troubleshoot, basically. 
