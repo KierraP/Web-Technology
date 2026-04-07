@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tennis Game</title>
+  <style>
+    canvas {
+      border: 2px solid black;
+      background: rgb(84, 180, 84);
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+  Tennis Game</h2>
+  
+<button onclick="playMusic()">Play Music</button><br><br>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<audio id="music" loop>
+  <source src="03 Come Over.m4a" type="audio/mpeg">
+</audio>
+
+<script>
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+let racket = {x:350, y:500, w:100, h:20, speed:5, color:"red"};
+let ball = {x:200, y:200, r:15, speedX:4, speedY:3, color:"yellow"};
+let keys = {};
+let bgColor = "lightgreen";
+
+document.addEventListener("keydown", e => keys[e.key] = true);
+document.addEventListener("keyup", e => keys[e.key] = false);
+
+function moveRacket() {
+  if(keys["ArrowLeft"]) racket.x -= racket.speed;
+  if(keys["ArrowRight"]) racket.x += racket.speed;
+  if(keys["ArrowUp"]) racket.y -= racket.speed;
+  if(keys["ArrowDown"]) racket.y += racket.speed;
+
+  if(racket.x < 0) racket.x = 0;
+  if(racket.x + racket.w > canvas.width) racket.x = canvas.width - racket.w;
+  if(racket.y < 0) racket.y = 0;
+  if(racket.y + racket.h > canvas.height) racket.y = canvas.height - racket.h;
+}
+
+function moveBall() {
+  ball.x += ball.speedX;
+  ball.y += ball.speedY;
+
+  if(ball.x - ball.r < 0 || ball.x + ball.r > canvas.width) ball.speedX *= -1;
+  if(ball.y - ball.r < 0 || ball.y + ball.r > canvas.height) ball.speedY *= -1;
+}
+
+function checkCollision() {
+  if(ball.x > racket.x && ball.x < racket.x + racket.w &&
+     ball.y > racket.y && ball.y < racket.y + racket.h) {
+    bgColor = "white";
+    ball.speedY *= -1.2;
+    setTimeout(()=>{bgColor="lightgreen"}, 200);
+  }
+}
+
+function draw() {
+  ctx.fillStyle = bgColor;
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  ctx.fillStyle = racket.color;
+  ctx.fillRect(racket.x, racket.y, racket.w, racket.h);
+
+  ctx.fillStyle = ball.color;
+  ctx.beginPath();
+  ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI*2);
+  ctx.fill();
+}
+
+function gameLoop() {
+  moveRacket();
+  moveBall();
+  checkCollision();
+  draw();
+}
+
+setInterval(gameLoop, 1000/60);
+
+function playMusic() {
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
