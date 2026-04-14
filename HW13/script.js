@@ -51,7 +51,7 @@ class Player {
   constructor() {
     this.x = 20;
     this.y = 20;
-    this.size = 40;
+    this.size = 80;
     this.speed = 3;
 
     this.image = new Image();
