@@ -1,0 +1,17 @@
+[
+  { "x": 300, "y": 80, "size": 10, "color": "gold" },
+  { "x": 420, "y": 160, "size": 10, "color": "gold" },
+  { "x": 600, "y": 370, "size": 10, "color": "gold" },
+
+  { "x": 130, "y": 200, "size": 10, "color": "gold"},
+  { "x": 400, "y": 400, "size": 10, "color": "gold" },
+  { "x": 850, "y": 108, "size": 10, "color": "gold" },
+
+  { "x": 300, "y": 264, "size": 10, "color": "gold" },
+  { "x": 480, "y": 278, "size": 10, "color": "gold" },
+  { "x": 850, "y": 334,"size": 10, "color": "gold" },
+
+  { "x": 150, "y": 438, "size": 10, "color": "gold" },
+  { "x": 460, "y": 590, "size": 10, "color": "gold" },
+  { "x": 700, "y": 600, "size": 10, "color": "gold" }
+]
