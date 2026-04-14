@@ -80,17 +80,18 @@ class Player {
       newY + this.size > canvas.height
     ) return;
 
-    // obstacle collision (blocking movement)
-    for (let obs of obstacles) {
-      if (
-        newX < obs.x + obs.w &&
-        newX + this.size > obs.x &&
-        newY < obs.y + obs.h &&
-        newY + this.size > obs.y
-      ) {
-        return;
-      }
-    }
+  const padding = 15; // increase = easier to move through
+
+for (let obs of obstacles) {
+  if (
+    newX < obs.x + obs.w - padding &&
+    newX + this.size > obs.x + padding &&
+    newY < obs.y + obs.h - padding &&
+    newY + this.size > obs.y + padding
+  ) {
+    return;
+  }
+}
 
     this.x = newX;
     this.y = newY;
