@@ -1,13 +1,7 @@
 [
-  { "x": 100, "y": 120, "w": 180, "h": 20, "color": "brown" },
-  { "x": 400, "y": 100, "w": 200, "h": 20, "color": "brown" },
-  { "x": 750, "y": 150, "w": 180, "h": 20, "color": "brown" },
-
-  { "x": 150, "y": 300, "w": 200, "h": 20, "color": "brown" },
-  { "x": 500, "y": 320, "w": 220, "h": 20, "color": "brown" },
-  { "x": 820, "y": 300, "w": 150, "h": 20, "color": "brown" },
-
-  { "x": 120, "y": 500, "w": 220, "h": 20, "color": "brown" },
-  { "x": 450, "y": 520, "w": 250, "h": 20, "color": "brown" },
-  { "x": 780, "y": 550, "w": 180, "h": 20, "color": "brown" }
+  { "x": 100, "y": 100, "width": 100, "height": 20, "color": "red" },
+  { "x": 250, "y": 200, "width": 20, "height": 100, "color": "blue" },
+  { "x": 50, "y": 300, "width": 120, "height": 20, "color": "green" },
+  { "x": 300, "y": 50, "width": 20, "height": 120, "color": "purple" },
+  { "x": 200, "y": 350, "width": 150, "height": 20, "color": "orange" }
 ]
