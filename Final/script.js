@@ -1,39 +1,39 @@
 const items = {
   hair: [
-    { full: "assets/hair1.png", thumb: "assets/hair1-thumb.png" },
-    { full: "assets/hair2.png", thumb: "assets/hair2-thumb.png" },
+    { full: "assets/hair1.PNG", thumb: "assets/hair1-thumb.PNG" },
+    { full: "assets/hair2.PNG", thumb: "assets/hair2-thumb.PNG" },
     { full: "assets/hair3.png", thumb: "assets/hair3-thumb.png" },
     { full: "assets/hair4.png", thumb: "assets/hair4-thumb.png"}
   ],
   top: [
-    { full: "assets/top1.png", thumb: "assets/top1-thumb.png" },
-    { full: "assets/top2.png", thumb: "assets/top2-thumb.png" },
-    { full: "assets/top3.png", thumb: "assets/top3-thumb.png" },
+    { full: "assets/top1.PNG", thumb: "assets/top1-thumb.PNG" },
+    { full: "assets/top2.PNG", thumb: "assets/top2-thumb.PNG" },
+    { full: "assets/top3.PNG", thumb: "assets/top3-thumb.PNG" },
     { full: "assets/top4.png", thumb: "assets/top4-thumb.png"}
   ],
   bottom: [
-    { full: "assets/bottom1.png", thumb: "assets/bottom1-thumb.png" },
-    { full: "assets/bottom2.png", thumb: "assets/bottom2-thumb.png" },
-    { full: "assets/bottom3.png", thumb: "assets/bottom3-thumb.png" },
+    { full: "assets/bottom1.PNG", thumb: "assets/bottom1-thumb.PNG" },
+    { full: "assets/bottom2.PNG", thumb: "assets/bottom2-thumb.PNG" },
+    { full: "assets/bottom3.PNG", thumb: "assets/bottom3-thumb.PNG" },
     { full: "assets/bottom4.png", thumb: "assets/bottom4-thumb.png"}
   ],
   jacket: [
     { full: "assets/none.png", thumb: "assets/none-thumb.png" },
-    { full: "assets/jacket2.png", thumb: "assets/jacket2-thumb.png" },
+    { full: "assets/jacket2.PNG", thumb: "assets/jacket2-thumb.PNG" },
     { full: "assets/jacket3.png", thumb: "assets/jacket3-thumb.png" },
     { full: "assets/jacket4.png", thumb: "assets/jacket4-thumb.png"}
   ],
   accessory: [
     { full: "assets/none.png", thumb: "assets/none-thumb.png" },
-    { full: "assets/accessory1.png", thumb: "assets/accessory1-thumb.png" },
+    { full: "assets/accessory1.PNG", thumb: "assets/accessory1-thumb.PNG" },
     { full: "assets/accessory2.png", thumb: "assets/accessory2-thumb.png"},
     { full: "assets/accessory3.png", thumb: "assets/accessory3-thumb.png"}
   ],
   shoes: [
-    { full: "assets/shoes1.png", thumb: "assets/shoes1-thumb.png" },
+    { full: "assets/shoes1.PNG", thumb: "assets/shoes1-thumb.PNG" },
     { full: "assets/shoes3.png", thumb: "assets/shoes3-thumb.png" },
     { full: "assets/shoes4.png", thumb: "assets/shoes4-thumb.png" },
-    { full: "assets/shoes2.png", thumb: "assets/shoes2-thumb.png" }
+    { full: "assets/shoes2.PNG", thumb: "assets/shoes2-thumb.PNG" }
   ]
 };
 
