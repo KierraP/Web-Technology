@@ -1,0 +1,121 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Aladin';
+  font-size: 30px;
+  background: #8ac1e3;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+#character {
+  position: relative;
+  width: 750px;
+  height: 1000px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#character img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#background { z-index: 0; object-fit: cover; }
+#base { z-index: 1; }
+#shoes { z-index: 2; }
+#bottom { z-index: 3; }
+#top { z-index: 4; }
+#jacket { z-index: 5; }
+#accessory { z-index: 7; }
+#hair { z-index: 6; }
+
+#controls {
+  width: 650px;
+  height: 960px;
+  background: #e6a9a9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#options-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.options-column {
+  flex: 1;
+}
+
+h2 {
+  margin: 18px 0 8px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #eee;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.08);
+  border-color: #888;
+}
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  font-family: 'Aladin';
+  font-size: 30px;
+  border: none;
+  border-radius: 8px;
+  background: #8b3848;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #85afb4;
+}
+
+#button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+#button-row button {
+  flex: 1;
+  margin-top: 0; 
+}
